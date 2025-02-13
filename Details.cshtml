@@ -1,14 +1,16 @@
-﻿@model OnlineStoreFurniture.Models.Customer
+﻿@model OnlineStoreFurniture.Models.Product
 
 @{
-    ViewData["Title"] = "Customer Details";
+    ViewData["Title"] = "Product Details";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <div>
     <h2>@Model.Name</h2>
-    <p>Email: @Model.Email</p>
-    <p>Phone: @Model.Phone</p>
+    <p>@Model.Description</p>
+    <p>Price: @Model.Price</p>
+    <p>Stock: @Model.Stock</p>
 </div>
-<a href="@Url.Action("Index", "Customer")" class="btn btn-secondary">Back to List</a>
+<a href="@Url.Action("Index", "Product")" class="btn btn-secondary">Back to List</a>
+
