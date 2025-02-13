@@ -1,37 +1,8 @@
-﻿@model IEnumerable<OnlineStoreFurniture.Models.Customer>
-
-@{
-    ViewData["Title"] = "Customers";
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<p>
-    <a href="@Url.Action("Create", "Customer")" class="btn btn-primary">Create New Customer</a>
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Name</td>
-                <td>@item.Email</td>
-                <td>@item.Phone</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Customer", new { id = item.Id })" class="btn btn-warning">Edit</a>
-                    <a href="@Url.Action("Details", "Customer", new { id = item.Id })" class="btn btn-info">Details</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
