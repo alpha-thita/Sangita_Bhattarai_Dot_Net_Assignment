@@ -1,0 +1,24 @@
+﻿@model OnlineStoreFurniture.Models.order
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Order Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Order ID</dt>
+        <dd>@Model.Id</dd>
+        <dt>Customer</dt>
+        <dd>@Model.Customer.Name</dd>
+        <dt>Order Date</dt>
+        <dd>@Model.OrderDate.ToShortDateString()</dd>
+        <dt>Total Amount</dt>
+        <dd>@Model.TotalAmount</dd>
+    </dl>
+</div>
+
+<a href="@Url.Action("Index")">Back to List</a>
