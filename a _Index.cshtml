@@ -1,7 +1,7 @@
-﻿@model IEnumerable<OnlineStoreFurniture.Models.order>
+﻿@model IEnumerable<OnlineStoreFurniture.Models.orderItem>
 
 @{
-    ViewData["Title"] = "Orders List";
+    ViewData["Title"] = "Order Items List";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -10,28 +10,28 @@
     <thead>
         <tr>
             <th>Order ID</th>
-            <th>Customer</th>
-            <th>Order Date</th>
-            <th>Total Amount</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var order in Model)
+        @foreach (var orderItem in Model)
         {
             <tr>
-                <td>@order.Id</td>
-                <td>@order.Customer.Name</td>
-                <td>@order.OrderDate.ToShortDateString()</td>
-                <td>@order.TotalAmount</td>
+                <td>@orderItem.OrderId</td>
+                <td>@orderItem.Product.Name</td>
+                <td>@orderItem.Quantity</td>
+                <td>@orderItem.Price</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = order.Id })">Edit</a> |
-                    <a href="@Url.Action("Details", new { id = order.Id })">Details</a> |
-                    <a href="@Url.Action("Delete", new { id = order.Id })">Delete</a>
+                    <a href="@Url.Action("Edit", new { id = orderItem.Id })">Edit</a> |
+                    <a href="@Url.Action("Details", new { id = orderItem.Id })">Details</a> |
+                    <a href="@Url.Action("Delete", new { id = orderItem.Id })">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<a href="@Url.Action("Create")">Create New Order</a>
+<a href="@Url.Action("Create")">Create New Order Item</a>
