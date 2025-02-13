@@ -1,20 +1,21 @@
-﻿@model IEnumerable<OnlineStoreFurniture.Models.Category>
+﻿@model IEnumerable<OnlineStoreFurniture.Models.Customer>
 
 @{
-    ViewData["Title"] = "Categories";
+    ViewData["Title"] = "Customers";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a href="@Url.Action("Create", "Category")" class="btn btn-primary">Create New Category</a>
+    <a href="@Url.Action("Create", "Customer")" class="btn btn-primary">Create New Customer</a>
 </p>
 
 <table class="table">
     <thead>
         <tr>
             <th>Name</th>
-            <th>Description</th>
+            <th>Email</th>
+            <th>Phone</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -23,10 +24,11 @@
         {
             <tr>
                 <td>@item.Name</td>
-                <td>@item.Description</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
                 <td>
-                    <a href="@Url.Action("Edit", "Category", new { id = item.Id })" class="btn btn-warning">Edit</a>
-                    <a href="@Url.Action("Details", "Category", new { id = item.Id })" class="btn btn-info">Details</a>
+                    <a href="@Url.Action("Edit", "Customer", new { id = item.Id })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Details", "Customer", new { id = item.Id })" class="btn btn-info">Details</a>
                 </td>
             </tr>
         }
