@@ -46,6 +46,7 @@ Stores customer reviews for products.
 ##sample image
 ![image](https://github.com/user-attachments/assets/4055cda9-fbf6-4b38-ae41-eeef3fc6ec20)
 ![image](https://github.com/user-attachments/assets/d298dc8c-8b21-47b9-abeb-61f934f02140)
+![image](https://github.com/user-attachments/assets/e5fb3fbb-6a4c-4ebc-89f8-520402412b31)
 ![image](https://github.com/user-attachments/assets/80e3c754-8ae6-4b9d-ba38-baabba680e3d)
 
 
